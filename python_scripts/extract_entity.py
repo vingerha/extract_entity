@@ -10,7 +10,7 @@ text = ""
 logger.warning('Process entity')
 # GET ENTITY DATA FROM HASS
 entity = ("%r" % entity_in).strip("'")
-logger.warning(entity)
+logger.warning("Entity: %s", entity)
 
 status = hass.states.get(entity)
 
@@ -20,7 +20,7 @@ text = text + "'state': '" + status.state + "'," + "\n"
 
 # ENTITY ATTRIBUTES
 
-logger.debug("getting attributes")
+logger.debug("Getting attributes: %s",attributes)
 for i in attributes:
 
     # GET ATTRIBUTE BY JSON ARRAY PASSED BY HASS CALL
